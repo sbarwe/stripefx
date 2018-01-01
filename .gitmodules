@@ -1,0 +1,6 @@
+[submodule "node-red-template-embedded"]
+	path = node-red-template-embedded
+	url = https://github.com/sbarwe/node-red-template-embedded.git
+[submodule "node-red-contrib-openpixelcontrol"]
+	path = node-red-contrib-openpixelcontrol
+	url = https://github.com/sbarwe/node-red-contrib-openpixelcontrol.git
