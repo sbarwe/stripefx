@@ -1,5 +1,1239 @@
-[{"id":"d2ceb03c.88e37","type":"tab","label":"IO","disabled":false,"info":""},{"id":"8e749030.8e725","type":"tab","label":"Stripe","disabled":false,"info":""},{"id":"444721e0.e6a58","type":"tab","label":"RPI"},{"id":"334dfc0d.92a564","type":"ui_tab","z":"","name":"Remote","icon":"dashboard","order":1},{"id":"a8075195.1d77b","type":"ui_group","z":"","name":"GPIO","tab":"334dfc0d.92a564","disp":true,"width":"7"},{"id":"b0a55a7f.f38958","type":"opc-server","z":"","server":"localhost","port":"7890","numleds":"298"},{"id":"9c21c1e6.40023","type":"ui_group","z":"","name":"Col1","tab":"c1ea40bd.a0843","order":1,"disp":false,"width":"6"},{"id":"fa5da85c.3a17c8","type":"ui_group","z":"","name":"Actions","tab":"c1ea40bd.a0843","order":4,"disp":true,"width":"6"},{"id":"b799b339.8360b","type":"ui_group","z":"","name":"Col2","tab":"c1ea40bd.a0843","order":2,"disp":false,"width":"6"},{"id":"1920912d.40aa3f","type":"ui_group","z":"","name":"Col3","tab":"c1ea40bd.a0843","order":3,"disp":false,"width
-":"6"},{"id":"c1ea40bd.a0843","type":"ui_tab","z":"","name":"RPi Control","icon":"dashboard","order":2},{"id":"fa273cca.bb19b","type":"ui_base","theme":{"name":"theme-dark","lightTheme":{"default":"#0094CE","baseColor":"#0094CE","baseFont":"-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif","edited":true,"reset":false},"darkTheme":{"default":"#097479","baseColor":"#792575","baseFont":"-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif","edited":true,"reset":false},"customTheme":{"default":"#4B7930","baseColor":"#097479","baseFont":"-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"},"themeState":{"base-color":{"default":"#097479","value":"#792577","edited":true},"page-titlebar-backgroundColor":{"value":"#792575","edited":false},"page-backgroundColor":{"value":"#111111","edited":false},"page-sidebar-backgroundColor":{"value":"#000000","edited":false},"group-textColor":{"value":"#b437ae","edited":false},"group-borderColor":{"value":"#555555","edited":false},"group-backgroundColor":{"value":"#333333","edited":false},"widget-textColor":{"value":"#eeeeee","edited":false},"widget-backgroundColor":{"value":"#792575","edited":false},"widget-borderColor":{"value":"#333333","edited":false},"base-font":{"value":"-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"}}},"site":{"name":"Lounge Dashboard","hideToolbar":"false","allowSwipe":"false","dateFormat":"DD.MM.YYYY","sizes":{"sx":48,"sy":48,"gx":6,"gy":6,"cx":6,"cy":6,"px":0,"py":0}}},{"id":"7e343040.020ff","type":"ui_group","z":"","name":"Stripe","tab":"334dfc0d.92a564","disp":true,"width":"7"},{"id":"6256dbd7.0f4504","type":"rpi-gpio out","z":"d2ceb03c.88e37","name":"","pin":"29","set":true,"level":"1","freq":"","out":"out","x":580,"y":200,"wires":[]},{"id":"1f13d4ab.43677b","type":"inject","z":"d2ceb03c.88e37","name":"","topic":"","payload":"0","payloadType":"num","repeat":"","crontab":"","once":true,"x":330,"y":200,"wires":[["d4d85d2d.76b4c"]]},{"id":"d4d85d2d.76b4c","type":"ui_switch","z":"d2ceb03c.88e37","name":"","label":"Left","group":"a8075195.1d77b","order":0,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"","style":"","onvalue":"0","onvalueType":"num","onicon":"","oncolor":"","offvalue":"1","offvalueType":"num","officon":"","offcolor":"","x":450,"y":200,"wires":[["6256dbd7.0f4504"]]},{"id":"ba8f269f.2be848","type":"rpi-gpio out","z":"d2ceb03c.88e37","name":"","pin":"31","set":true,"level":"1","freq":"","out":"out","x":580,"y":260,"wires":[]},{"id":"781ae2fa.6e440c","type":"inject","z":"d2ceb03c.88e37","name":"","topic":"","payload":"1","payloadType":"num","repeat":"","crontab":"","once":true,"x":330,"y":260,"wires":[["cc9a59df.d8f2d8"]]},{"id":"cc9a59df.d8f2d8","type":"ui_switch","z":"d2ceb03c.88e37","name":"","label":"Lava","group":"a8075195.1d77b","order":0,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"","style":"","onvalue":"0","onvalueType":"num","onicon":"","oncolor":"","offvalue":"1","offvalueType":"num","officon":"","offcolor":"","x":450,"y":260,"wires":[["ba8f269f.2be848"]]},{"id":"c9f71bb6.efefa8","type":"rpi-gpio out","z":"d2ceb03c.88e37","name":"","pin":"35","set":true,"level":"1","freq":"","out":"out","x":980,"y":200,"wires":[]},{"id":"382f0ad4.6bf1a6","type":"inject","z":"d2ceb03c.88e37","name":"","topic":"","payload":"0","payloadType":"num","repeat":"","crontab":"","once":true,"x":730,"y":200,"wires":[["ca067428.6c1878"]]},{"id":"ca067428.6c1878","type":"ui_switch","z":"d2ceb03c.88e37","name":"","label":"Right","group":"a8075195.1d77b","order":0,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"","style":"","onvalue":"0","onvalueType":"num","onicon":"","oncolor":"","offvalue":"1","offvalueType":"num","officon":"","offcolor":"","x":850,"y":200,"wires":[["c9f71bb6.efefa8"]]},{"id":"c2188c70.ee3cc","type":"rpi-gpio out","z":"d2ceb03c.88e37","name":"","pin":"37","set":true,"level":"1","freq":"","out":"out","x":980,"y":260,"wires":[]},{"id":"23f2c379.35442c","type":"inject","z":"d2ceb03c.88e37","name":"","topic":"","payload":"1","payloadType":"num","repeat":"","crontab":"","once":true,"x":730,"y":260,"wires":[["cfe8a71f.1fc158"]]},{"id":"cfe8a71f.1fc158","type":"ui_switch","z":"d2ceb03c.88e37","name":"","label":"LIFX","group":"a8075195.1d77b","order":0,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"","style":"","onvalue":"0","onvalueType":"num","onicon":"","oncolor":"","offvalue":"1","offvalueType":"num","officon":"","offcolor":"","x":850,"y":260,"wires":[["c2188c70.ee3cc"]]},{"id":"65f52f81.f59e4","type":"ui_gauge","z":"444721e0.e6a58","name":"","group":"9c21c1e6.40023","order":2,"width":0,"height":0,"gtype":"gage","title":"CPU Temperature","label":"C","format":"{{value}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"x":1092,"y":171,"wires":[]},{"id":"38ffa8db.b06648","type":"exec","z":"444721e0.e6a58","command":"vcgencmd measure_temp","addpay":false,"append":"","useSpawn":"","timer":"","name":"RPi Temp.","x":732,"y":171,"wires":[["9986da75.5f0518"],[],[]]},{"id":"f8d957e.14871a8","type":"inject","z":"444721e0.e6a58","name":"","topic":"","payload":"","payloadType":"date","repeat":"10","crontab":"","once":false,"x":190,"y":160,"wires":[["5fee9bde.febc74"]]},{"id":"9986da75.5f0518","type":"function","z":"444721e0.e6a58","name":"","func":"str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;","outputs":1,"noerr":0,"x":912,"y":171,"wires":[["65f52f81.f59e4","c5639678.b16a28"]]},{"id":"a28451d0.3d03e","type":"ui_button","z":"444721e0.e6a58","name":"","group":"fa5da85c.3a17c8","order":2,"width":0,"height":0,"label":"Reboot","color":"","bgcolor":"","icon":"","payload":"","payloadType":"str","topic":"","x":502,"y":551,"wires":[["9d4ddf2d.fe429"]]},{"id":"9d4ddf2d.fe429","type":"exec","z":"444721e0.e6a58","command":"sudo reboot","addpay":false,"append":"","useSpawn":"","timer":"","name":"Reboot","x":720,"y":551,"wires":[[],[],[]]},{"id":"d4123fc7.4491f","type":"ui_button","z":"444721e0.e6a58","name":"","group":"fa5da85c.3a17c8","order":3,"width":0,"height":0,"label":"Shutdown","color":"","bgcolor":"red","icon":"","payload":"","payloadType":"str","topic":"","x":510.5,"y":595.25,"wires":[["db57aa4b.cb3898"]]},{"id":"db57aa4b.cb3898","type":"exec","z":"444721e0.e6a58","command":"sudo shutdown -h now","addpay":false,"append":"","useSpawn":"","timer":"","name":"Shutdown","x":731.5,"y":613.25,"wires":[[],[],[]]},{"id":"c5639678.b16a28","type":"ui_chart","z":"444721e0.e6a58","name":"","group":"9c21c1e6.40023","order":3,"width":0,"height":0,"label":"","chartType":"line","legend":"false","xformat":"HH:mm:ss","interpolate":"linear","nodata":"","ymin":"","ymax":"","removeOlder":"24","removeOlderPoints":"","removeOlderUnit":"3600","cutout":0,"x":1092,"y":211,"wires":[[],[]]},{"id":"8a12a7c0.c77a88","type":"exec","z":"444721e0.e6a58","command":"top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'","addpay":false,"append":"","useSpawn":"","timer":"","name":"CPU Load","x":732,"y":251,"wires":[["3a729ae7.3d59f6"],[],[]]},{"id":"d68337e7.e98108","type":"exec","z":"444721e0.e6a58","command":"free | grep Mem | awk '{print 100*($4+$6+$7)/$2}'","addpay":false,"append":"","useSpawn":"","timer":"","name":"Free Memory","x":732,"y":331,"wires":[["149ed99e.50ec16"],[],[]]},{"id":"3a729ae7.3d59f6","type":"ui_gauge","z":"444721e0.e6a58","name":"","group":"9c21c1e6.40023","order":1,"width":0,"height":0,"gtype":"gage","title":"Processor","label":"CPU","format":"{{value}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"x":1092,"y":251,"wires":[]},{"id":"149ed99e.50ec16","type":"ui_gauge","z":"444721e0.e6a58","name":"","group":"b799b339.8360b","order":1,"width":0,"height":0,"gtype":"gage","title":"Memory","label":"RAM","format":"{{value.toFixed(1)}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"x":1092,"y":331,"wires":[]},{"id":"5661cef5.7a8e6","type":"exec","z":"444721e0.e6a58","command":"df -h","addpay":false,"append":"","useSpawn":"","timer":"","name":"Disk Usage","x":732,"y":411,"wires":[["ec8c92b9.80adc"],[],[]]},{"id":"e40b9f42.62f24","type":"ui_gauge","z":"444721e0.e6a58","name":"","group":"1920912d.40aa3f","order":1,"width":0,"height":0,"gtype":"gage","title":"Disk","label":"Usage","format":"{{value}}","min":0,"max":"100","colors":["#00b500","#e6e600","#ca3838"],"x":1092,"y":411,"wires":[]},{"id":"ec8c92b9.80adc","type":"function","z":"444721e0.e6a58","name":"","func":"var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;","outputs":1,"noerr":0,"x":912,"y":411,"wires":[["e40b9f42.62f24"]]},{"id":"5b6a7c5f.1bcb24","type":"inject","z":"444721e0.e6a58","name":"","topic":"","payload":"","payloadType":"date","repeat":"60","crontab":"","once":false,"x":230,"y":400,"wires":[["8a3e9a68.0932a8"]]},{"id":"d277b046.db31e","type":"ui_ui_control","z":"444721e0.e6a58","name":"ui control","x":260,"y":320,"wires":[["1e1706b5.543319"]]},{"id":"1e1706b5.543319","type":"function","z":"444721e0.e6a58","name":"TrackDashboardUser","func":"var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\n\ncount += msg.payload == \"connect\" ? 1 : -1;\n\nif (count < 0)\n    count = 0;\n\nglobalContext.set(\"dashboardconnectioncount\",count);  // this is now available to other nodes\n\n\n\nreturn msg;","outputs":1,"noerr":0,"x":460,"y":320,"wires":[[]]},{"id":"5fee9bde.febc74","type":"function","z":"444721e0.e6a58","name":"Check Dashboard connected","func":"var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\nnode.status({text:\"Dashboard Users: \"+count});\nif (count > 0)\nreturn msg;","outputs":1,"noerr":0,"x":430,"y":180,"wires":[["8a12a7c0.c77a88","d68337e7.e98108","38ffa8db.b06648"]]},{"id":"8a3e9a68.0932a8","type":"function","z":"444721e0.e6a58","name":"Check Dashboard connected","func":"var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\nnode.status({text:\"Dashboard Users: \"+count});\nif (count > 0)\nreturn msg;","outputs":1,"noerr":0,"x":490,"y":400,"wires":[["5661cef5.7a8e6"]]},{"id":"7a339f3c.a3e4f","type":"opc-client","z":"8e749030.8e725","name":"","opcserver":"b0a55a7f.f38958","channel":0,"command":0,"x":1200,"y":100,"wires":[]},{"id":"82075f3e.b2edd","type":"inject","z":"8e749030.8e725","name":"start","topic":"","payload":"animationcolor","payloadType":"flow","repeat":"","crontab":"","once":false,"x":90,"y":80,"wires":[["f2130485.510178"]]},{"id":"94e5c5bb.433ed8","type":"function","z":"8e749030.8e725","name":"nightrider","func":"var b = context.get(\"b\") || Buffer.allocUnsafe(298 * 3)\n//var b = Buffer.allocUnsafe(298 * 3)\nb = b.fill(\"000000\", \"hex\");\n\nvar p = context.get(\"p\") || 0;\nb.write(flow.get('animationcolor').substring(1)||\"ffffff\", p*3, 3, \"hex\");\np+=1;\ncontext.set(\"p\",p%298);\ncontext.set(\"b\",b);\nreturn { payload: b };","outputs":1,"noerr":0,"x":820,"y":60,"wires":[["7a339f3c.a3e4f"]]},{"id":"f2130485.510178","type":"ui_switch","z":"8e749030.8e725","name":"","label":"Stripe Anim","group":"7e343040.020ff","order":0,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"","style":"","onvalue":"animationcolor","onvalueType":"flow","onicon":"","oncolor":"","offvalue":"stop","offvalueType":"str","officon":"","offcolor":"","x":307.05555725097656,"y":79.22223281860352,"wires":[["9fd4d7e0.0ac69"]]},{"id":"7708fe7b.b7cb","type":"ui_text","z":"8e749030.8e725","group":"7e343040.020ff","order":0,"width":0,"height":0,"name":"","label":"Anim state","format":"{{msg.status.text}}","layout":"row-spread","x":670,"y":440,"wires":[]},{"id":"eafe9c0c.481a6","type":"ui_dropdown","z":"8e749030.8e725","name":"","label":"Animation","place":"Style","group":"7e343040.020ff","order":0,"width":0,"height":0,"passthru":true,"options":[{"label":"Static","value":"static","type":"str"},{"label":"Nightrider","value":"nightrider","type":"str"},{"label":"Running","value":"running","type":"str"},{"label":"Ping Pong","value":"pingpong","type":"str"}],"payload":"","topic":"","x":260,"y":380,"wires":[["59474cbd.626eb4"]]},{"id":"59474cbd.626eb4","type":"change","z":"8e749030.8e725","name":"","rules":[{"t":"set","p":"animationstyle","pt":"flow","to":"payload","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":440,"y":380,"wires":[[]]},{"id":"46bb573.63edba8","type":"switch","z":"8e749030.8e725","name":"","property":"animationstyle","propertyType":"flow","rules":[{"t":"eq","v":"static","vt":"str"},{"t":"eq","v":"nightrider","vt":"str"},{"t":"eq","v":"running","vt":"str"},{"t":"eq","v":"pingpong","vt":"str"},{"t":"eq","v":"flash","vt":"str"},{"t":"eq","v":"shotgun","vt":"str"},{"t":"eq","v":"fillup","vt":"str"},{"t":"eq","v":"progressbar","vt":"str"},{"t":"eq","v":"stackup","vt":"str"},{"t":"eq","v":"flipflop","vt":"str"},{"t":"eq","v":"","vt":"str"}],"checkall":"false","outputs":11,"x":650,"y":80,"wires":[["24ef802.bcd57"],["94e5c5bb.433ed8"],["105214f0.45af43"],["84b1eb9
-4.92406"],[],[],[],[],[],[],[]]},{"id":"cb372ba9.eca188","type":"ui_colour_picker","z":"8e749030.8e725","name":"","label":"Stripe","group":"7e343040.020ff","format":"hex","outformat":"string","showSwatch":false,"showPicker":true,"showValue":false,"showAlpha":false,"showLightness":true,"dynOutput":"true","order":0,"width":"5","height":"4","passthru":true,"topic":"","x":250,"y":440,"wires":[["adfe8bad.c47658"]]},{"id":"adfe8bad.c47658","type":"change","z":"8e749030.8e725","name":"","rules":[{"t":"set","p":"animationcolor","pt":"flow","to":"$join([\"#\",payload])","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":450,"y":440,"wires":[["7708fe7b.b7cb"]]},{"id":"d82c556a.379a78","type":"rbe","z":"8e749030.8e725","name":"","func":"rbe","gap":"","start":"","inout":"out","x":1010,"y":20,"wires":[["7a339f3c.a3e4f"]]},{"id":"62fdcf9a.6b13d","type":"inject","z":"8e749030.8e725","name":"","topic":"","payload":"aaaaaa","payloadType":"str","repeat":"","crontab":"","once
-":true,"x":100,"y":440,"wires":[["cb372ba9.eca188"]]},{"id":"e12c1a27.435ab8","type":"status","z":"8e749030.8e725","name":"","scope":["7a339f3c.a3e4f"],"x":660,"y":380,"wires":[["e2efa318.82b7f"]]},{"id":"e2efa318.82b7f","type":"ui_text","z":"8e749030.8e725","group":"7e343040.020ff","order":0,"width":0,"height":0,"name":"","label":"OPC","format":"{{msg.status.text}}","layout":"row-spread","x":830,"y":380,"wires":[]},{"id":"18bcb177.aeaabf","type":"inject","z":"8e749030.8e725","name":"","topic":"","payload":"static","payloadType":"str","repeat":"","crontab":"","once":true,"x":90,"y":380,"wires":[["eafe9c0c.481a6"]]},{"id":"e5e44734.ee8dd8","type":"inject","z":"8e749030.8e725","name":"","topic":"","payload":"stop","payloadType":"str","repeat":"","crontab":"","once":false,"x":87.05555725097656,"y":139.22223281860352,"wires":[["f2130485.510178"]]},{"id":"24ef802.bcd57","type":"change","z":"8e749030.8e725","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"$substring($flowContex
-t('animationcolor'), 1, 6)\t","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":840,"y":20,"wires":[["d82c556a.379a78"]]},{"id":"9fd4d7e0.0ac69","type":"function","z":"8e749030.8e725","name":"timer","func":"\nvar t = context.get('t') || setInterval(() => node.send(msg),1000/30);\n\nif (msg.payload == \"stop\") {\n    clearInterval(t);\n    t = undefined;\n}\n\ncontext.set('t', t);\n\nnode.status({fill:t ? 'green' : 'red',shape:\"ring\",text:t ? 'on' : 'off'});\n\n\nreturn msg;","outputs":1,"noerr":0,"x":467.05555725097656,"y":79.22223281860352,"wires":[["46bb573.63edba8"]]},{"id":"105214f0.45af43","type":"function","z":"8e749030.8e725","name":"running","func":"var b = context.get(\"b\");\nif (!b) {\n    b = Buffer.allocUnsafe(2 * 298 * 3);\n    var c = flow.get('animationcolor').substring(1)||\"ffffff\";\n    b = b.fill(\"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff\", \"hex\");\n    context.set(\"b\",b);\n}\n\n\n\nvar p = context.get(\"p\") || 0;\np = (p+6) % 298;\n\n\ncontext.set(\"p\",p);\n\nreturn { payload: b.slice(p*3, p*3+298*3) };","outputs":1,"noerr":0,"x":820,"y":100,"wires":[["7a339f3c.a3e4f"]]},{"id":"3bb6964f.1df202","type":"ui_button","z":"8e749030.8e725","name":"","group":"7e343040.020ff","order":0,"width":0,"height":0,"passthru":false,"label":"Step+","color":"","bgcolor":"","icon":"","payload":"step+","payloadType":"str","topic":"","x":470,"y":160,"wires":[["46bb573.63edba8"]]},{"id":"84b1eb94.92406","type":"function","z":"8e749030.8e725","name":"pingpong","func":"var b = context.get(\"b\");\nif (!b) {\n    b = Buffer.allocUnsafe(298 * 3);\n    //var c = flow.get('animationcolor').substring(1)||\"ffffff\";\n    b = b.fill(\"000000\", \"hex\");\n    context.set(\"b\",b);\n}\n\nvar p = context.get(\"p\") || 0;\n\nif (msg.payload == \"step+\") {\n    p = 0;\n    s = 0;\n    l = (298 / 2) * 3;\n    b = b.fill(\"000000\", \"hex\");\n    context.set('s', s);\n    context.set('l', l);\n}\nif (msg.payload == \"step-\") {\n    p = 0;\n    s = (298 / 2)*3;\n    l = (298)*3;\n    b = b.fill(\"000000\", \"hex\");\n    context.set('s', s);\n    context.set('l', l);\n}\n\n\nif (p<256) {\n    s = context.get('s');\n    l = context.get('l');\n    p = (p+16);\n    if (p>255) p = 254;\n    context.set(\"p\",p);\n    b.fill(p,s,l);\n    return { payload: b };\n}","outputs":1,"noerr":0,"x":820,"y":140,"wires":[["7a339f3c.a3e4f"]]},{"id":"726fdc6d.bfdd1c","type":"ui_button","z":"8e749030.8e725","name":"","group":"7e343040.020ff","order":0,"width":0,"height":0,"passthru":false,"label":"Step-","color":"","bgcolor":"","icon":"","payload":"step-","payloadType":"str","topic":"","x":467.05555725097656,"y":219.22223281860352,"wires":[["46bb573.63edba8"]]}]
+[
+    {
+        "id": "255c9ed3.311ff2",
+        "type": "tab",
+        "label": "IO",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "deb258a4.8f021",
+        "type": "tab",
+        "label": "Stripe",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "769fa6bc.1d325",
+        "type": "tab",
+        "label": "RPI"
+    },
+    {
+        "id": "59460099.44eda",
+        "type": "opc-server",
+        "z": "",
+        "server": "localhost",
+        "port": "7890",
+        "numleds": "298"
+    },
+    {
+        "id": "3ecc363c.7ae4c2",
+        "type": "rpi-gpio out",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "pin": "29",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 580,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1c44f92e.560f77",
+        "type": "inject",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "fdedafb9.2692c"
+            ]
+        ]
+    },
+    {
+        "id": "fdedafb9.2692c",
+        "type": "ui_switch",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "label": "Left",
+        "group": "a8075195.1d77b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "0",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "3ecc363c.7ae4c2"
+            ]
+        ]
+    },
+    {
+        "id": "3633e3c3.1cb514",
+        "type": "rpi-gpio out",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "pin": "31",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "deb5652b.76b92",
+        "type": "inject",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "7bd7e6e.f941018"
+            ]
+        ]
+    },
+    {
+        "id": "7bd7e6e.f941018",
+        "type": "ui_switch",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "label": "Lava",
+        "group": "a8075195.1d77b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "0",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "3633e3c3.1cb514"
+            ]
+        ]
+    },
+    {
+        "id": "8048c6f3.04e3c",
+        "type": "rpi-gpio out",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "pin": "35",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 980,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4106f3c4.7693dc",
+        "type": "inject",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 730,
+        "y": 200,
+        "wires": [
+            [
+                "46632c0d.42e684"
+            ]
+        ]
+    },
+    {
+        "id": "46632c0d.42e684",
+        "type": "ui_switch",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "label": "Right",
+        "group": "a8075195.1d77b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "0",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "8048c6f3.04e3c"
+            ]
+        ]
+    },
+    {
+        "id": "a5c33a2a.12b998",
+        "type": "rpi-gpio out",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "pin": "37",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5c9e9ab5.a27584",
+        "type": "inject",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 730,
+        "y": 260,
+        "wires": [
+            [
+                "67c321e2.3355b"
+            ]
+        ]
+    },
+    {
+        "id": "67c321e2.3355b",
+        "type": "ui_switch",
+        "z": "255c9ed3.311ff2",
+        "name": "",
+        "label": "LIFX",
+        "group": "a8075195.1d77b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "0",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "1",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "a5c33a2a.12b998"
+            ]
+        ]
+    },
+    {
+        "id": "5f78fe9f.9e2808",
+        "type": "ui_gauge",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "9c21c1e6.40023",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1092,
+        "y": 171,
+        "wires": []
+    },
+    {
+        "id": "c50ebe0b.0fb9f",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "RPi Temp.",
+        "x": 732,
+        "y": 171,
+        "wires": [
+            [
+                "56e892b1.2af72c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "35389788.664cb8",
+        "type": "inject",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "87c43094.583b7"
+            ]
+        ]
+    },
+    {
+        "id": "56e892b1.2af72c",
+        "type": "function",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 912,
+        "y": 171,
+        "wires": [
+            [
+                "5f78fe9f.9e2808",
+                "f7f31e43.37a22"
+            ]
+        ]
+    },
+    {
+        "id": "c4aa59d2.9c9638",
+        "type": "ui_button",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "fa5da85c.3a17c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Reboot",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 502,
+        "y": 551,
+        "wires": [
+            [
+                "c7897404.9553c"
+            ]
+        ]
+    },
+    {
+        "id": "c7897404.9553c",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 720,
+        "y": 551,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ec164986.ca2b7",
+        "type": "ui_button",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "fa5da85c.3a17c8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Shutdown",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 510.5,
+        "y": 595.25,
+        "wires": [
+            [
+                "2216d3bb.bfad1c"
+            ]
+        ]
+    },
+    {
+        "id": "2216d3bb.bfad1c",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Shutdown",
+        "x": 731.5,
+        "y": 613.25,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f7f31e43.37a22",
+        "type": "ui_chart",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "9c21c1e6.40023",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "x": 1092,
+        "y": 211,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ba64acc3.3a1dc",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "CPU Load",
+        "x": 732,
+        "y": 251,
+        "wires": [
+            [
+                "88b9baeb.c9b39"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e24b8be5.5c88e",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "free | grep Mem | awk '{print 100*($4+$6+$7)/$2}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Free Memory",
+        "x": 732,
+        "y": 331,
+        "wires": [
+            [
+                "a1da7336.f12668"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "88b9baeb.c9b39",
+        "type": "ui_gauge",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "9c21c1e6.40023",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Processor",
+        "label": "CPU",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1092,
+        "y": 251,
+        "wires": []
+    },
+    {
+        "id": "a1da7336.f12668",
+        "type": "ui_gauge",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "b799b339.8360b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Memory",
+        "label": "RAM",
+        "format": "{{value.toFixed(1)}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1092,
+        "y": 331,
+        "wires": []
+    },
+    {
+        "id": "60a56c42.4b6b14",
+        "type": "exec",
+        "z": "769fa6bc.1d325",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Disk Usage",
+        "x": 732,
+        "y": 411,
+        "wires": [
+            [
+                "a7fd4f2d.ca05b8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c2388bb.0ccd38",
+        "type": "ui_gauge",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "group": "1920912d.40aa3f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Disk",
+        "label": "Usage",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1092,
+        "y": 411,
+        "wires": []
+    },
+    {
+        "id": "a7fd4f2d.ca05b8",
+        "type": "function",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 912,
+        "y": 411,
+        "wires": [
+            [
+                "2c2388bb.0ccd38"
+            ]
+        ]
+    },
+    {
+        "id": "9f192eed.9e81",
+        "type": "inject",
+        "z": "769fa6bc.1d325",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "9f7ff100.49b51"
+            ]
+        ]
+    },
+    {
+        "id": "668df3b8.f9598c",
+        "type": "ui_ui_control",
+        "z": "769fa6bc.1d325",
+        "name": "ui control",
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "9cbe63f.f31b5a"
+            ]
+        ]
+    },
+    {
+        "id": "9cbe63f.f31b5a",
+        "type": "function",
+        "z": "769fa6bc.1d325",
+        "name": "TrackDashboardUser",
+        "func": "var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\n\ncount += msg.payload == \"connect\" ? 1 : -1;\n\nif (count < 0)\n    count = 0;\n\nglobalContext.set(\"dashboardconnectioncount\",count);  // this is now available to other nodes\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87c43094.583b7",
+        "type": "function",
+        "z": "769fa6bc.1d325",
+        "name": "Check Dashboard connected",
+        "func": "var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\nnode.status({text:\"Dashboard Users: \"+count});\nif (count > 0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "ba64acc3.3a1dc",
+                "e24b8be5.5c88e",
+                "c50ebe0b.0fb9f"
+            ]
+        ]
+    },
+    {
+        "id": "9f7ff100.49b51",
+        "type": "function",
+        "z": "769fa6bc.1d325",
+        "name": "Check Dashboard connected",
+        "func": "var globalContext = this.context.global;\nvar count = globalContext.get('dashboardconnectioncount')||0;\nnode.status({text:\"Dashboard Users: \"+count});\nif (count > 0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "60a56c42.4b6b14"
+            ]
+        ]
+    },
+    {
+        "id": "50397cc5.f14bd4",
+        "type": "opc-client",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "opcserver": "59460099.44eda",
+        "channel": 0,
+        "command": 0,
+        "x": 1200,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "30a6937f.f11aa4",
+        "type": "inject",
+        "z": "deb258a4.8f021",
+        "name": "start",
+        "topic": "",
+        "payload": "animationcolor",
+        "payloadType": "flow",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "ccbbe7cf.6c952"
+            ]
+        ]
+    },
+    {
+        "id": "3c7eb08f.1c2038",
+        "type": "function",
+        "z": "deb258a4.8f021",
+        "name": "nightrider",
+        "func": "var b = context.get(\"b\") || Buffer.allocUnsafe(298 * 3)\n//var b = Buffer.allocUnsafe(298 * 3)\nb = b.fill(\"000000\", \"hex\");\n\nvar p = context.get(\"p\") || 0;\nb.write(flow.get('animationcolor').substring(1)||\"ffffff\", p*3, 3, \"hex\");\np+=1;\ncontext.set(\"p\",p%298);\ncontext.set(\"b\",b);\nreturn { payload: b };",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 60,
+        "wires": [
+            [
+                "50397cc5.f14bd4"
+            ]
+        ]
+    },
+    {
+        "id": "ccbbe7cf.6c952",
+        "type": "ui_switch",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "label": "Stripe Anim",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "animationcolor",
+        "onvalueType": "flow",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "stop",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 307.05555725097656,
+        "y": 79.22223281860352,
+        "wires": [
+            [
+                "c6f79e22.fbe6f8"
+            ]
+        ]
+    },
+    {
+        "id": "698e1db2.9a1d0c",
+        "type": "ui_text",
+        "z": "deb258a4.8f021",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Anim state",
+        "format": "{{msg.status.text}}",
+        "layout": "row-spread",
+        "x": 670,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "65518298.87c4cc",
+        "type": "ui_dropdown",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "label": "Animation",
+        "place": "Style",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "options": [
+            {
+                "label": "Static",
+                "value": "static",
+                "type": "str"
+            },
+            {
+                "label": "Nightrider",
+                "value": "nightrider",
+                "type": "str"
+            },
+            {
+                "label": "Running",
+                "value": "running",
+                "type": "str"
+            },
+            {
+                "label": "Ping Pong",
+                "value": "pingpong",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 260,
+        "y": 380,
+        "wires": [
+            [
+                "e2f62d77.cbe8d"
+            ]
+        ]
+    },
+    {
+        "id": "e2f62d77.cbe8d",
+        "type": "change",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "animationstyle",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9bcfb42.0c6f68",
+        "type": "switch",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "property": "animationstyle",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "static",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "nightrider",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "pingpong",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flash",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "shotgun",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "fillup",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "progressbar",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "stackup",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flipflop",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "outputs": 11,
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "a62faec8.843ab8"
+            ],
+            [
+                "3c7eb08f.1c2038"
+            ],
+            [
+                "498d2a52.d086ec"
+            ],
+            [
+                "54dffb58.888254"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "53ab1edf.0de608",
+        "type": "ui_colour_picker",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "label": "Stripe",
+        "group": "7e343040.020ff",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": false,
+        "showPicker": true,
+        "showValue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "true",
+        "order": 0,
+        "width": "5",
+        "height": "4",
+        "passthru": true,
+        "topic": "",
+        "x": 250,
+        "y": 440,
+        "wires": [
+            [
+                "b97fcb0b.8bee6"
+            ]
+        ]
+    },
+    {
+        "id": "b97fcb0b.8bee6",
+        "type": "change",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "animationcolor",
+                "pt": "flow",
+                "to": "$join([\"#\",payload])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "698e1db2.9a1d0c"
+            ]
+        ]
+    },
+    {
+        "id": "f66764c8.61588",
+        "type": "rbe",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "x": 1010,
+        "y": 20,
+        "wires": [
+            [
+                "50397cc5.f14bd4"
+            ]
+        ]
+    },
+    {
+        "id": "a4f61cca.7586e8",
+        "type": "inject",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "topic": "",
+        "payload": "aaaaaa",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "53ab1edf.0de608"
+            ]
+        ]
+    },
+    {
+        "id": "170e2ce1.a79fb3",
+        "type": "status",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "scope": [
+            "50397cc5.f14bd4"
+        ],
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "fc93a469.c068a"
+            ]
+        ]
+    },
+    {
+        "id": "fc93a469.c068a",
+        "type": "ui_text",
+        "z": "deb258a4.8f021",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "OPC",
+        "format": "{{msg.status.text}}",
+        "layout": "row-spread",
+        "x": 830,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "75fbc7a0.f97648",
+        "type": "inject",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "topic": "",
+        "payload": "static",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "65518298.87c4cc"
+            ]
+        ]
+    },
+    {
+        "id": "2b7d5a8d.f50666",
+        "type": "inject",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 87.05555725097656,
+        "y": 139.22223281860352,
+        "wires": [
+            [
+                "ccbbe7cf.6c952"
+            ]
+        ]
+    },
+    {
+        "id": "a62faec8.843ab8",
+        "type": "change",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$substring($flowContext('animationcolor'), 1, 6)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 20,
+        "wires": [
+            [
+                "f66764c8.61588"
+            ]
+        ]
+    },
+    {
+        "id": "c6f79e22.fbe6f8",
+        "type": "function",
+        "z": "deb258a4.8f021",
+        "name": "timer",
+        "func": "\nvar t = context.get('t') || setInterval(() => node.send(msg),1000/30);\n\nif (msg.payload == \"stop\") {\n    clearInterval(t);\n    t = undefined;\n}\n\ncontext.set('t', t);\n\nnode.status({fill:t ? 'green' : 'red',shape:\"ring\",text:t ? 'on' : 'off'});\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 467.05555725097656,
+        "y": 79.22223281860352,
+        "wires": [
+            [
+                "f9bcfb42.0c6f68"
+            ]
+        ]
+    },
+    {
+        "id": "498d2a52.d086ec",
+        "type": "function",
+        "z": "deb258a4.8f021",
+        "name": "running",
+        "func": "var b = context.get(\"b\");\nif (!b) {\n    b = Buffer.allocUnsafe(2 * 298 * 3);\n    var c = flow.get('animationcolor').substring(1)||\"ffffff\";\n    b = b.fill(\"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff\", \"hex\");\n    context.set(\"b\",b);\n}\n\n\n\nvar p = context.get(\"p\") || 0;\np = (p+6) % 298;\n\n\ncontext.set(\"p\",p);\n\nreturn { payload: b.slice(p*3, p*3+298*3) };",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 100,
+        "wires": [
+            [
+                "50397cc5.f14bd4"
+            ]
+        ]
+    },
+    {
+        "id": "776ed3a8.5e62dc",
+        "type": "ui_button",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Step+",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "step+",
+        "payloadType": "str",
+        "topic": "",
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "f9bcfb42.0c6f68"
+            ]
+        ]
+    },
+    {
+        "id": "54dffb58.888254",
+        "type": "function",
+        "z": "deb258a4.8f021",
+        "name": "pingpong",
+        "func": "var b = context.get(\"b\");\nif (!b) {\n    b = Buffer.allocUnsafe(298 * 3);\n    //var c = flow.get('animationcolor').substring(1)||\"ffffff\";\n    b = b.fill(\"000000\", \"hex\");\n    context.set(\"b\",b);\n}\n\nvar p = context.get(\"p\") || 0;\n\nif (msg.payload == \"step+\") {\n    context.set('f', f = context.get('f') ? false : true);\n\nif (f) {\n    p = 0;\n    s = 0;\n    l = (298 / 2) * 3;\n    b = b.fill(\"000000\", \"hex\");\n    context.set('s', s);\n    context.set('l', l);\n}\nelse {\n    p = 0;\n    s = (298 / 2)*3;\n    l = (298)*3;\n    b = b.fill(\"000000\", \"hex\");\n    context.set('s', s);\n    context.set('l', l);\n}\n}\n\nif (p<256) {\n    s = context.get('s');\n    l = context.get('l');\n    p = (p+16);\n    if (p>255) p = 254;\n    context.set(\"p\",p);\n    b.fill(p,s,l);\n    return { payload: b };\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "50397cc5.f14bd4"
+            ]
+        ]
+    },
+    {
+        "id": "a9ab2a13.a4a688",
+        "type": "ui_button",
+        "z": "deb258a4.8f021",
+        "name": "",
+        "group": "7e343040.020ff",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Step-",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "step-",
+        "payloadType": "str",
+        "topic": "",
+        "x": 467.05555725097656,
+        "y": 219.22223281860352,
+        "wires": [
+            [
+                "f9bcfb42.0c6f68"
+            ]
+        ]
+    }
+]
