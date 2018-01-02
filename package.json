@@ -1,0 +1,24 @@
+{
+  "name": "stripefx",
+  "version": "0.0.1",
+  "description": "Music controlled effects for LED stripes. # Setup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbarwe/stripefx.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sbarwe/stripefx/issues"
+  },
+  "homepage": "https://github.com/sbarwe/stripefx#readme",
+  "dependencies": {
+    "node-opc-server": "^1.0.4",
+    "rpi-ws281x-native": "^0.8.2"
+  }
+}

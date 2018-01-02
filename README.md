@@ -12,6 +12,7 @@ imported as standard dependencies via package.json
 
 ```bash
 git clone --recurse-submodules https://github.com/sbarwe/stripefx.git 
+(git checkout init; git submodule update --init --recursive) 
 cd node-red-template-embedded && npm install
 npm install node-red-contrib-contextbrowser node-red-contrib-dashboard node-red-contrib-curve
 ln -s ../flows.json flows.json
