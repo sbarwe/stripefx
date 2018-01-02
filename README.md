@@ -13,6 +13,7 @@ imported as standard dependencies via package.json
 ```bash
 git clone --recurse-submodules https://github.com/sbarwe/stripefx.git 
 (git checkout init; git submodule update --init --recursive) 
+npm install
 cd node-red-template-embedded && npm install
 npm install node-red-contrib-contextbrowser node-red-contrib-dashboard node-red-contrib-curve
 ln -s ../flows.json flows.json
@@ -22,7 +23,7 @@ cd ./nodes/node-red-contrib-openpixelcontrol && npm install
 
 # Start
 
-You need to have an OPC-Server running
+You need to have an OPC-Server running with `sudo npm start`
 
 ```
 cd node-red-template-embedded && npm start --node-red-template-embedded:listening_address=0.0.0.0
@@ -33,6 +34,6 @@ Run an OPC Server from [node-openpixelcontrol](https://github.com/beyondscreen/n
 [node-opc-server](https://github.com/bbx10/node-opc-server)
 or simulate incl. OpenGL LEDs with [openpixelcontrol](https://github.com/zestyping/openpixelcontrol)
 # TODO:
-- embed OPC Server
+- embed OPC Server with simulation output: https://github.com/F1LT3R/axel
 - Embded WS/OPC Bridge
 - Embded WebAudio FFT Demo
