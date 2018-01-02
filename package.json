@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "nodered": "cd node-red-template-embedded && npm start --node-red-template-embedded:listening_address=0.0.0.0", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

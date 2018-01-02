@@ -15,10 +15,11 @@ git clone --recurse-submodules https://github.com/sbarwe/stripefx.git
 (git checkout init; git submodule update --init --recursive) 
 npm install
 cd node-red-template-embedded && npm install
-npm install node-red-contrib-contextbrowser node-red-contrib-dashboard node-red-contrib-curve
+npm install node-red-contrib-contextbrowser node-red-dashboard node-red-contrib-curve
 ln -s ../flows.json flows.json
-ln -s ../node-red-contrib-openpixelcontrol ./nodes/node-red-contrib-openpixelcontrol
-cd ./nodes/node-red-contrib-openpixelcontrol && npm install
+cd nodes
+ln -s ../../node-red-contrib-openpixelcontrol node-red-contrib-openpixelcontrol
+cd node-red-contrib-openpixelcontrol && npm install
 ```
 
 # Start
