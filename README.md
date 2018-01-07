@@ -34,7 +34,11 @@ cd node-red-template-embedded && npm start --node-red-template-embedded:listenin
 Run an OPC Server from [node-openpixelcontrol](https://github.com/beyondscreen/node-openpixelcontrol),
 [node-opc-server](https://github.com/bbx10/node-opc-server)
 or simulate incl. OpenGL LEDs with [openpixelcontrol](https://github.com/zestyping/openpixelcontrol)
+
+# Credits
+
+The beat detection is based on the work of https://www.airtightinteractive.com/demos/js/uberviz/audioanalysis/
+
 # TODO:
-- embed OPC Server with simulation output: https://github.com/F1LT3R/axel
-- Embded WS/OPC Bridge
-- Embded WebAudio FFT Demo
+- Embded WS/OPC Bridge (socket.io / wsautoreconnect - see pi2)
+- Embded WebAudio FFT Demo (Beatdetection / FFTP JSON Format)
